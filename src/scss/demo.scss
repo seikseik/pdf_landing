@@ -9,6 +9,11 @@
         url("../fonts/BeausiteClassicWeb-Regular.woff2") format("woff2"),
 }
 
+*{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body{
   font-family: "Beau";
 }
@@ -56,6 +61,7 @@ body{
     font-size: 6vw;
     font-family: "Pdf";
     line-height: 1;
+    text-align: center;
   }
 }
 
@@ -69,6 +75,7 @@ body{
   h2{
     font-size: 4vw;
     font-family: "Pdf";
+    text-align: center;
   }
 }
 
@@ -115,5 +122,73 @@ body{
   padding: 20px;
   font-size: 14px;
   text-transform: uppercase;
+  flex-wrap: wrap;
   a{color:black;}
+  *{padding: 0 10px;}
+}
+
+.mobile-desc{display: none;}
+
+@media only screen and (max-width: 768px) {
+
+.mobile-desc{display: block;}
+  .event_desc_row{
+    display: none;
+  }
+
+  .landing_pfd{
+    height: auto;
+  }
+
+  .title_row,
+  .header_row,
+  .subtitle_row
+  {height: auto;}
+
+  .header_row h3{
+    font-size: 14px;
+  }
+
+
+  .title_row h1{
+    font-size: 35px;
+    line-height: 1.3;
+  }
+  .subtitle_row h2{
+    font-size: 25px
+  }
+
+  .event_title_row{
+    height: auto;
+    flex-direction: column;
+    padding: 0;
+    .col{
+      padding: 40px 20px;
+      h3{
+        margin-bottom: 10px;
+        font-size: 30px;
+      }
+      p{
+        margin-bottom: 20px;
+      }
+      .mobile-desc{
+        text-transform: none;
+      }
+      &:nth-child(2){
+        border-top:1px solid black;
+        border-bottom:1px solid black;
+      }
+    }
+  }
+
+  .footer_row{
+    flex-direction: column;
+    height: auto;
+    font-size: 12px;
+    *{
+      padding: 20px;
+      overflow-wrap: break-word; word-wrap: break-word; -ms-hyphens: auto; -moz-hyphens: auto; -webkit-hyphens: auto; hyphens: auto;
+    }
+  }
+
 }
