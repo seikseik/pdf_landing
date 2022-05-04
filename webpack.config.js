@@ -73,6 +73,17 @@ module.exports = {
             loader: 'simple-pug-loader'
           }
         ]
+      },
+        {
+        test: /\.(mov|mp4)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]'
+            }
+          }
+        ]
       }
     ],
   },
