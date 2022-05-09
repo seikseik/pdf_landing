@@ -156,7 +156,22 @@ body{
 
 .mobile-desc{display: none;}
 
+.desktop{
+  display: flex;
+}
+
+.mobile{
+  display: none;
+}
+
 @media only screen and (max-width: 768px) {
+
+.mobile{
+  display: flex;
+}
+.desktop{
+  display: none;
+}
 
 .mobile-desc{display: block;}
   .event_desc_row{
